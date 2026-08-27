@@ -18,4 +18,6 @@ void main() {
     System.out.println("Sightings over 2:" +
             nb.sightings_over(2).stream().map(Sighting::describe).collect(Collectors.toSet())
     );
+    /*System.out.println("----");
+    nb.add(new WeatherNote(LocalDate.of(2026,8,27),200,"Sunny"));*/
 }
