@@ -1,0 +1,4 @@
+interface Describable {
+
+    String describe();
+}
