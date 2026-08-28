@@ -7,6 +7,11 @@ import java.util.stream.Collectors;
 class FieldNotebook {
     //"""HAS-A list of sightings. Note: it does NOT extend list."""
     String owner;
+
+    public List<Sighting> get_sightings() {
+        return _sightings;
+    }
+
     List<Sighting> _sightings;
 
     public FieldNotebook(String owner) {
@@ -44,6 +49,11 @@ class FieldNotebook {
         System.out.printf("--- %s's notebook ---%n",owner);
         for (Sighting s : _sightings) {
             System.out.println(" " + s.describe());
+        }
+    }
+    public void describeAll() {
+        for (Sighting s: _sightings) {
+            System.out.println("  " + s.describe());
         }
     }
 }
